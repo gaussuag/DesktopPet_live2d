@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icon/baishikeleqishui32.png</file>
+        <file>res/icon/exit32.png</file>
+        <file>res/icon/settings32.png</file>
+        <file>res/icon/close32.png</file>
+        <file>res/file/modelPath.json</file>
+        <file>res/file/modelPic/epsilon.png</file>
+        <file>res/file/modelPic/haru.png</file>
+        <file>res/file/modelPic/shizuku.png</file>
+        <file>res/file/modelPic/wanko.png</file>
+        <file>res/icon/SupCatDownArrow.png</file>
+        <file>res/icon/SupCatHome.png</file>
+        <file>res/icon/SupCatShow.png</file>
+        <file>res/icon/SupCatSort.png</file>
+        <file>res/icon/queding.png</file>
+        <file>res/file/modelPic/chitose.png</file>
+        <file>res/file/modelPic/haru01.png</file>
+        <file>res/file/modelPic/haru02.png</file>
+        <file>res/file/modelPic/hibiki.png</file>
+        <file>res/file/modelPic/hijiki.png</file>
+        <file>res/file/modelPic/liang.png</file>
+        <file>res/file/modelPic/miku.png</file>
+        <file>res/file/modelPic/tororo.png</file>
+        <file>res/file/modelPic/z16.png</file>
+        <file>res/icon/zhaocaimao.png</file>
+        <file>res/icon/maofagu.png</file>
+        <file>res/icon/jietu.png</file>
+        <file>res/icon/weizhi.png</file>
+        <file>res/icon/addApplicationIcon.png</file>
+        <file>res/file/modelPic/bronya.png</file>
+        <file>res/file/modelPic/95niang.png</file>
+        <file>res/file/modelPic/ban-dsr-black-destroy.png</file>
+        <file>res/file/modelPic/ban-dsr-black.png</file>
+        <file>res/file/modelPic/ban-dsr50-destroy.png</file>
+        <file>res/file/modelPic/ban-dsr50.png</file>
+        <file>res/file/modelPic/ban-hk416-destroy.png</file>
+        <file>res/file/modelPic/ban-rfb-destroy.png</file>
+        <file>res/file/modelPic/golden-money.png</file>
+        <file>res/file/modelPic/hk416.png</file>
+        <file>res/file/modelPic/rfb.png</file>
+    </qresource>
+</RCC>
