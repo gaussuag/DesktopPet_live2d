@@ -53,6 +53,8 @@ private:
     void initModelTestWidget();
     void initConfig();
     void initSettingByConfig();
+    bool generalConfig();
+
     void modifiedConfigJsonWakeupWord(QString word);
     void modifiedConfigJsonAutoRunValue(int value);
     void modifiedConfigJsonVoiceEnableValue(int value);

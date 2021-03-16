@@ -203,7 +203,12 @@ void SettingsWidget::initConfig()
     QFile configfile(QString("%1/config.json").arg(QApplication::applicationDirPath()));
 
     if(!configfile.exists())
-        return;
+    {
+        if(generalConfig())
+            return initConfig();
+        else
+            return;
+    }
 
     configfile.open(QIODevice::ReadOnly|QIODevice::Text);
     QString configString = configfile.readAll();
@@ -251,6 +256,7 @@ void SettingsWidget::initConfig()
             voffset = modelObj["voffset"].toString();
             scaleValue = modelObj["scale"].toDouble();
         }
+
     }
 }
 
@@ -263,6 +269,35 @@ void SettingsWidget::initSettingByConfig()
     voiceEnableCheckBox->setCheckState(voiceEnablestate);
 
     wakeupWordLineEdit->setText(wakeupword);
+}
+
+bool SettingsWidget::generalConfig()
+{
+    QJsonObject mainObj;
+    QJsonObject configObj;
+    QJsonObject autorun;
+    autorun.insert("autorun",QJsonValue("0"));
+
+    QJsonObject currentModelObj;
+    currentModelObj.insert("name",QJsonValue("tororo"));
+    currentModelObj.insert("hoffset",QJsonValue(""));
+    currentModelObj.insert("voffset",QJsonValue(""));
+    currentModelObj.insert("scale",QJsonValue(""));
+
+
+    configObj.insert("autorun",autorun);
+    configObj.insert("currentModel",currentModelObj);
+
+    mainObj.insert("config",configObj);
+
+    QJsonDocument doc(mainObj);
+    QByteArray data = doc.toJson();
+    QFile configfile(QString("%1/config.json").arg(QApplication::applicationDirPath()));
+    configfile.open(QIODevice::WriteOnly);
+    configfile.write(data);
+    configfile.close();
+
+    return configfile.exists();
 }
 
 void SettingsWidget::AddApplicationBt_dropUrlsChange_slot(QList<QUrl> urls)
